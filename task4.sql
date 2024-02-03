@@ -11,4 +11,4 @@ AND a.ind_branch = b.ind_branch
 AND a.product_name = b.product_name 
 GROUP BY a.calendar_year
 HAVING a.calendar_year >= 2007
-ORDER BY calendar_year;
+ORDER BY a.calendar_year;
