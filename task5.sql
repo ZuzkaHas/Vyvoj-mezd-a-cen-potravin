@@ -1,7 +1,7 @@
 SELECT
 x.calendar_year,
 x.average_payroll_difference_in_percentage,
-x. average_price_difference_in_percentage,
+x.average_price_difference_in_percentage,
 y.GDP_difference_in_percentage
 FROM 
 (SELECT 
