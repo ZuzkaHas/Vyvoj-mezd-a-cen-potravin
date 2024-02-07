@@ -1,8 +1,11 @@
 SELECT
 x.calendar_year,
 x.average_payroll_difference_in_percentage,
+IF (x.average_payroll_difference_in_percentage > 5,1,0) AS significant_payroll_growth,
 x.average_price_difference_in_percentage,
-y.GDP_difference_in_percentage
+IF (x.average_price_difference_in_percentage > 5,1,0) AS significant_price_growth,
+y.GDP_difference_in_percentage,
+IF (y.GDP_difference_in_percentage > 5,1,0) AS significant_GDP_growth
 FROM 
 (SELECT 
 a.calendar_year,
