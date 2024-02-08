@@ -28,6 +28,7 @@ FROM czechia_price cp
 JOIN czechia_price_category cpc 
 ON cp.category_code = cpc.code 
 WHERE cp.region_code IS NULL
+AND cpc.name != 'Jakostní víno bílé'
 GROUP BY product_name, product_year
 ) b
 ON a.payroll_year = b.product_year
