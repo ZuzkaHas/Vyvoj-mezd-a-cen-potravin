@@ -12,5 +12,4 @@ ON a.calendar_year = b.calendar_year + 1
 AND a.product_name = b.product_name
 ) AS x
 GROUP BY x.product_name
-HAVING x.product_name != 'Jakostní víno bílé'
 ORDER BY total_price_difference_in_percentage;
